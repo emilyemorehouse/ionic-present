@@ -46,6 +46,74 @@
 
         <section>
           <div class="code">
+            <h2>Initial Journal service:</h2>
+
+            <pre><code data-trim contenteditable class="javascript">
+.factory('Journal', function() {
+  var journal = [
+    {
+      "title": "My 1st Entry",
+      "content": "This is a sample entry."
+    }
+  ];
+
+  return {
+    all: function() {
+      return journal;
+    },
+    remove: function(entry) {
+      journal.splice(journal.indexOf(entry), 1);
+    },
+    get: function(entryId) {
+      for (var i = 0; i < journal.length; i++) {
+        if (journal[i].id === parseInt(entryId)) {
+          return journal[i];
+        }
+      }
+      return null;
+    }
+  };
+})</code></pre>
+        </section>
+
+        <section>
+          <div class="code">
+            <h2>Journal service with add:</h2>
+
+            <pre><code data-trim contenteditable class="javascript">
+.factory('Journal', function() {
+  var journal = [
+    {
+      "title": "My 1st Entry",
+      "content": "This is a sample entry."
+    }
+  ];
+
+  return {
+    all: function() {
+      return journal;
+    },
+    remove: function(entry) {
+      journal.splice(journal.indexOf(entry), 1);
+    },
+    get: function(entryId) {
+      for (var i = 0; i < journal.length; i++) {
+        if (journal[i].id === parseInt(entryId)) {
+          return journal[i];
+        }
+      }
+      return null;
+    },
+    add: function(entry) {
+      journal.push(entry);
+    }
+  };
+})</code></pre>
+        </section>
+
+
+        <section>
+          <div class="code">
             <h2>Quick modal:</h2>
 
             <h4>Inject:</h4>
@@ -119,6 +187,53 @@ var alertPopup = $ionicPopup.alert({
     type: 'button-royal'
   }]
 });</code></pre>
+        </section>
+
+
+        <section>
+          <div class="code">
+            <h2>Journal service with localstorage:</h2>
+
+            <pre><code data-trim contenteditable class="javascript">
+.factory('Journal', function() {
+  // Give us an example object
+  var journal = [
+    {
+      "title": "My 1st Entry",
+      "content": "This is a sample entry."
+    }
+  ];
+
+  // If we have a journal object, use that!
+  if (localStorage.journal)
+    journal = JSON.parse(localStorage.journal);
+
+  var save = function() {
+    localStorage.journal = JSON.stringify(journal);
+  };
+
+  return {
+    all: function() {
+      return journal;
+    },
+    remove: function(entry) {
+      journal.splice(journal.indexOf(entry), 1);
+      save();
+    },
+    get: function(entryId) {
+      for (var i = 0; i < journal.length; i++) {
+        if (journal[i].id === parseInt(entryId)) {
+          return journal[i];
+        }
+      }
+      return null;
+    },
+    add: function(entry) {
+      journal.push(entry);
+      save();
+    }
+  };
+})</code></pre>
         </section>
 
 
