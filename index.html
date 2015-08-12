@@ -172,13 +172,13 @@
 
         <section data-background="white">
           <img src="img/ios8-adoption.png">
-          <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_8/from_date:-141,report_unit:day,to_date:0</p>
+          <!-- <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_8/from_date:-141,report_unit:day,to_date:0</p> -->
         </section>
 
 
         <section data-background="white">
           <img src="img/android-adoption.png">
-          <p style="font-size:10px">https://mixpanel.com/trends/#report/android_os_adoption</p>
+          <!-- <p style="font-size:10px">https://mixpanel.com/trends/#report/android_os_adoption</p> -->
         </section>
 
 
@@ -188,11 +188,17 @@
           <p style="margin:30px auto 20px auto; width: 600px">
             Common UI, APIs, views, navigation, stack history, transitions, interactions, gestures, etc.
           </p>
-            <img src="img/native-sdk.png" style="width:66%">
+          <p class="native-logos">
+            <img src="img/apple.png">
+            <img src="img/android.png">
+            <img src="img/windows.png">
+            <img src="img/blackberry.png" style="opacity:0.8">
+            <img src="img/firefoxos.png">
+          </p>
         </section>
 
 
-        <section data-background="img/websdk.png" style="width:100%">
+        <section data-background="img/websdk.png">
         </section>
 
 
@@ -254,6 +260,21 @@
           </ul>
         </section>
 
+
+        <section data-background="img/adoption.png">
+          <h2 class="ionic-blue">Ionic's Adoption</h2>
+          <ul class="ionic-blue">
+            <li>18,000+ Github Stars</li>
+            <li>Top 40 most starred Github repos</li>
+            <li>Consistently Top 10 trending JS Github repos</li>
+            <li>Ionic CLI 95,000 downloads/month</li>
+            <li>600,000+ Ionic apps have been started from the CLI</li>
+            <li>Released Alpha: November 2013</li>
+            <li>Released 1.0.0: May 2015</li>
+          </ul>
+        </section>
+
+
         <section>
           <div class="col preview demo-frame">
             <iframe isrc="demos/list/index.html"></iframe>
@@ -276,7 +297,7 @@
 </ion-list></code></pre>
           </div>
         </section>
-
+        
 
         <section>
           <div class="col preview demo-frame">
@@ -333,6 +354,7 @@
 </ion-tabs></code></pre>
           </div>
         </section>
+
 
         <section>
           <div class="col preview demo-frame">
@@ -472,14 +494,20 @@
         </section>
 
 
-        <section data-background="img/chromium.jpg">
+        <section data-background="#232323">
+          <h2 style="color:#32b83b;font-family:Monaco;"><strong>Coding Time!</strong></h2>
+          <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
+        </section>
+
+
+        <!-- <section data-background="img/chromium.jpg">
           <h3 style="margin:0; font-size:60px;">Modern</h3>
           <h2 style=" font-size:80px;">Chromium!</h2>
           <p>Chromium for Android <strong>WebViews</strong></p>
           <p><strong>Upgrade Android</strong> 4.0+ and above</p>
           <p>Same hardware, <strong>modern software</strong></p>
           <p><strong>Amazing performance</strong> improvements</p>
-        </section>
+        </section> -->
 
 
         <section data-background="img/ng-cordova.png">
@@ -491,7 +519,6 @@
 
 
         <section data-background="img/ionic-push.png">
-
         </section>
 
 
@@ -507,59 +534,36 @@
         </section>
 
 
-        <section data-background="img/adoption.png">
-          <h2 class="ionic-blue">Ionic's Adoption</h2>
-          <ul class="ionic-blue">
-            <li>16,000+ Github Stars</li>
-            <li>Top 40 most starred Github repos</li>
-            <li>Consistently Top 10 trending JS Github repos</li>
-            <li>Ionic CLI 95,000 downloads/month</li>
-            <li>600,000+ Ionic apps have been started from our CLI</li>
-            <li>Released Alpha: November 2013</li>
-            <li>Released Beta: March 2014</li>
-            <li>Released RC: March 2015</li>
-          </ul>
+        <section data-background="img/community.jpg">
         </section>
-
 
         <!-- <section data-background="white">
           <img src="img/v1rc.png">
         </section> -->
 
 
-        <section>
+        <!-- <section>
           <h2>What's Next!</h2>
           <ul>
+            <li>Removal of JavaScript scrolling</li>
             <li>Component Modularity</li>
             <li>Customized Animations</li>
             <li>Webworkers and Multi-threading</li>
             <li>Add more Ionic.io services</li>
             <li>...and much more to come ;)</li>
           </ul>
-        </section>
-
-
-        <section data-background="img/ionic-angular-v2.jpg">
-        </section>
-
-
-
-
-
-
-        <section data-background="#232323">
-          <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time!</strong></h2>
-          <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
-        </section>
+        </section> -->
 
         <section>
           <h2><strong>MIT LICENSED</strong></h2>
           <h6 class="light-text">Free to use (even commercially)</h6>
         </section>
 
+        <!-- <section data-background="img/ionic-angular-v2.jpg">
+        </section> -->
 
         <section>
-          <h2>Get Started with Ionic!</h2>
+          <h2>Ionic Resources!</h2>
           <br />
           <p>
             <strong>Getting started guide</strong>
@@ -570,10 +574,18 @@
           </p>
           <br />
           <p>
-            <strong>Documentation</strong>
+            <strong>General Docs</strong>
             <br />
             <a href="http://ionicframework.com/docs/" target="_blank">
               <span class="light-text">ionicframework.com/docs</span>
+            </a>
+          </p>
+          <br />
+          <p>
+            <strong>Component Docs</strong>
+            <br />
+            <a href="http://ionicframework.com/docs/components/" target="_blank">
+              <span class="light-text">ionicframework.com/docs/components</span>
             </a>
           </p>
           <br />
@@ -584,29 +596,22 @@
               <span class="light-text">forum.ionicframework.com</span>
             </a>
           </p>
-          <br />
-          <p>
-            <strong>Contribute on GitHub</strong>
-            <br />
-            <a href="https://github.com/driftyco/ionic" target="_blank">
-              <span class="light-text">github.com/driftyco/ionic</span>
-            </a>
-          </p>
         </section>
 
+
         <section>
-          <h2><code style="font-size:60px">&lt;/html&gt;</code></h2>
-          <h3>
-            <a href="https://twitter.com/ionicframework" target="_blank">
-              @ionicframework
-            </a>
+          <h2><code style="font-size: 80px">&lt;/html&gt;</code></h2>
+          <h3 style="text-transform:none; font-size: 46px">
+            <a style="text-decoration:none;" href="https://twitter.com/emilyemorehouse" target="_blank">@cuttlesoft</a>
           </h3>
-          <h4>
-            <a href="http://ionicframework.github.io/ionic-present/#/">
-              http://ionicframework.github.io/ionic-present
-            </a>
+          <h3 style="text-transform:none; font-size: 46px">
+            <a style="text-decoration:none;" href="https://twitter.com/emilyemorehouse" target="_blank">@emilyemorehouse</a>
+          </h3>
+          <h4 style="text-transform:none;font-size:36px;margin-top:50px;">
+            <a style="text-decoration:none;" href="http://emilyemorehouse.github.io/ionic-present/#/">http://emilyemorehouse.github.io/ionic-present</a>
           </h4>
         </section>
+
 
       </div>
 
