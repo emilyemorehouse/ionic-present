@@ -48,6 +48,10 @@
           <div class="code">
             <h2>Quick modal:</h2>
 
+            <h4>Inject:</h4>
+            <pre><code data-trim contenteditable class="javascript">
+$ionicModal</code></pre>
+
             <h4>To create modal:</h4>
             <pre><code data-trim contenteditable class="javascript">
 $ionicModal.fromTemplateUrl('templates/modal.html', {
@@ -65,6 +69,56 @@ $scope.modal.show();</code></pre>
             <pre><code data-trim contenteditable class="javascript">
 $scope.modal.hide();</code></pre>
           </div>
+        </section>
+
+
+         <section>
+          <div class="code">
+            <h2>Our initial add modal:</h2>
+            <pre><code data-trim contenteditable class="xml">
+<div class="modal">
+    <ion-header-bar>
+        <h1 class="title">Add Entry</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Title</span>
+                <input type="text" ng-model="entry.title">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Content</span>
+                <input type="text" ng-model="entry.content">
+            </label>
+        </div>
+
+        <button class="button button-full button-royal" ng-click="closeEntryModal(entry)">Done</button>
+    </ion-content>
+</div></code></pre>
+
+          </div>
+        </section>
+
+
+        <section>
+          <div class="code">
+            <h2>Quick popup:</h2>
+
+            <h4>Inject:</h4>
+            <pre><code data-trim contenteditable class="javascript">
+$ionicPopup</code></pre>
+
+            <h4>To create popup:</h4>
+            <pre><code data-trim contenteditable class="javascript">
+var alertPopup = $ionicPopup.alert({
+  title: 'STOP RIGHT THERE!',
+  template: 'Please fill out all fields.',
+  buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
+    text: 'Say you\'re sorry.',
+    type: 'button-royal'
+  }]
+});</code></pre>
         </section>
 
 
